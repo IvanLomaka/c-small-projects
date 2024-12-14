@@ -60,4 +60,4 @@ The game is played by loading a sequence of words from a text file, where the fi
 To compile the program in ANSI C89, use the following command:
 
 ```bash
-gcc -o labirinto parole_labirinto.c
+gcc main.c lista.c -o output
