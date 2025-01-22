@@ -1,0 +1,27 @@
+listtype * codifica(listtype *lst) {
+    // Verifica se la lista è vuota o ha un solo elemento (non c'è nulla da fare)
+    if (lst == NULL || lst->next == NULL) {
+        return lst;
+    }
+
+    // Puntatore all'elemento corrente della lista
+    listtype *current = lst;
+    
+    // Percorri la lista in coppie
+    while (current != NULL && current->next != NULL) {
+        // Somma i due elementi consecutivi
+        current->value += current->next->value;
+        
+        // Rimuovi il secondo elemento della coppia (quello che è stato sommato)
+        listtype *temp = current->next;
+        current->next = current->next->next;
+        
+        // Libera la memoria dell'elemento rimosso
+        free(temp);
+        
+        // Passa al prossimo elemento
+        current = current->next;
+    }
+
+    return lst;
+}

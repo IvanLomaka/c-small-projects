@@ -76,7 +76,6 @@ int main() {
     printMatrix(&matrice2);
     printf("\n");
 
-
     if(rows == cols) {
         for(i = 0; i < rows; i++) {
             for(j = 0; j < cols; j++) {

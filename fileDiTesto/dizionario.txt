@@ -1,0 +1,8 @@
+casa
+cane
+mela
+vela
+nave
+meta
+gela
+mala
