@@ -7,19 +7,19 @@ typedef struct _slist{
 } slist_t;
 
 int countLines(char nomefile[]) {
-    int linee = 0;
+    int caratteri = 0;
     FILE *fileSorgente = NULL;
-    char buffer[1001];
+    char c;
 
     fileSorgente = fopen(nomefile, "r");
 
     if(fileSorgente == NULL) return -1;
 
-    while(fgets(buffer, sizeof(buffer), fileSorgente) != NULL) linee++;
+    while((c = fgetc(fileSorgente)) != EOF) caratteri++;
 
     fclose(fileSorgente);
 
-    return linee;
+    return caratteri;
 }
 
 slist_t *checkFiles(slist_t *head) {

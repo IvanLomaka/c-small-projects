@@ -4,7 +4,6 @@ int codifica(int valori[], int codice[], int n_valori, int n_codice) {
     int somma = 0;
     int temp[n_valori];
 
-    
     for (int i = 0; i < n_codice; i++) {
         int passi = codice[i] % n_valori;  // Modulo per ottimizzare le rotazioni
         
